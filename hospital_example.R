@@ -1,6 +1,5 @@
-# Load the functions used below:
-source("DBDA2E-utilities.R") # Must be in R's current working directory.
-require(rjags)               # Must have previously installed package rjags.
+source("DBDA2E-utilities.R") 
+require(rjags)              
 
 fileNameRoot="Jags-ExampleScript" # For output file names.
 
@@ -8,8 +7,8 @@ fileNameRoot="Jags-ExampleScript" # For output file names.
 data = data.frame(
   n = c(27,148,119,810,211,196,148,215,207,97,256,360),
   y = c(0,18,8,46,8,13,9,31,14,8,29,24)
-) # Read data file; must be in curr. work. dir.
-y = data$y        # The y values are in the column named y.
+) 
+y = data$y       
 n = data$n
 Ntotal = length(y)  # Compute the total number of flips.
 dataList = list(    # Put the information into a list.
